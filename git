@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Initial commit: SSE Demo Simulator with distributed security task queue"
+git branch -M main
+git remote add origin https://github.com/mrexcelgodsown/sse-demo-simulator.git
+git push -u origin main
