@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+  worker:
+    build: .
+    command: python worker.py
+    depends_on:
+      - redis
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
